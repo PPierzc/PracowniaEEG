@@ -48,8 +48,9 @@ sp.open()
 sp.blinkSSVEP([0, 0], 1, 1)
 
 print('Starting Task 1')
+raw_input('Are you ready? ...')
 task_1(sp)
-input('Are you read? ...')
+raw_input('Are you ready? ...')
 task_1(sp)
 
 sp.close()
