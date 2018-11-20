@@ -13,7 +13,7 @@ def task_1(sp):
 
 	prev_freq = 0
 
-	number_iterations = 15
+	number_iterations = 1
 
 	while freqs:
 		print '[LOG] frequencies left', len(freqs.values())
@@ -37,7 +37,7 @@ def task_1(sp):
 
 		sp.blinkSSVEP([0, 0], 1, 1)
 
-		if freqs[freq] >= 15:
+		if freqs[freq] >= number_iterations:
 			del freqs[freq]
 			print '[LOG] removing frequency', freq
 
