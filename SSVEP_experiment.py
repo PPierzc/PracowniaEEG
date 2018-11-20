@@ -5,6 +5,11 @@ import SerialPort as Sp
 
 
 def task_1(sp):
+	'''
+	Using consts from experiment design at: https://brain.fuw.edu.pl/edu/index.php/Pracownia_EEG/SSVEP_1
+	:param sp: Serial Port Instance
+	:return: None
+	'''
 	freqs = dict.fromkeys([4, 7, 10, 13, 16, 20, 25, 30, 35, 40], 0)
 
 	times = [3, 4, 5, 6, 7]
@@ -41,6 +46,7 @@ def task_1(sp):
 			del freqs[freq]
 			print '[LOG] removing frequency:', freq, 'Hz'
 
+		print ''
 
 sp = Sp.SerialPort('/dev/ttyUSB0')
 sp.open()
