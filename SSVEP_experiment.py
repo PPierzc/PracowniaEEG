@@ -13,7 +13,7 @@ def task_1(sp):
 
 	prev_freq = 0
 
-	number_iterations = 1
+	number_iterations = 15
 
 	while freqs:
 		print '[LOG] frequencies left:', len(freqs.values())
@@ -48,8 +48,10 @@ sp.open()
 sp.blinkSSVEP([0, 0], 1, 1)
 
 print('Starting Task 1')
+
 raw_input('Are you ready? ...')
 task_1(sp)
+
 raw_input('Are you ready? ...')
 task_1(sp)
 
