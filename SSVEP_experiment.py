@@ -16,6 +16,8 @@ def task_1(sp):
 	number_iterations = 15
 
 	while freqs:
+		print('[LOG] frequencies left', len(freqs.values()))
+
 		time.sleep(random.choice(times))
 
 		freq = random.choice(freqs.keys())
@@ -25,6 +27,8 @@ def task_1(sp):
 
 		freqs[freq] += 1
 
+		print('[LOG] current frequency', freq)
+
 		sp.blinkSSVEP([freq, 0], 1, 1)
 
 		time.sleep(time_length)
@@ -33,6 +37,7 @@ def task_1(sp):
 
 		if freqs[freq] >= 15:
 			del freqs[freq]
+			print('[LOG] removing frequency', freq)
 
 
 sp = Sp.SerialPort('/dev/ttyUSB0')
