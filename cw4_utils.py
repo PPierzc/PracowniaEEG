@@ -9,4 +9,4 @@ def akaike(p, V, shape):
 def get_aic_func(signal, low, high):
 	cfs = coeffs(signal, low, high)
 	aic = [akaike(p + 1, cf, signal.shape) for p, cf in enumerate(cfs)]
-
+	return np.array(aic)
