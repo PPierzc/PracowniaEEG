@@ -1,4 +1,5 @@
 import numpy as np
+from mtmvar import mult_AR
 
 def coeffs(signal, low, high):
 	return [ mult_AR(signal, order, 1) for order in range(low, high + 1) ]
