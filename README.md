@@ -11,3 +11,4 @@ Exploring characteristics of ERP. First creating models to understand the backgr
 Exploring characteristics of SSVEP
 
 ### Cw 4
+Spectral density parametric analysis
