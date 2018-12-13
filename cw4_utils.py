@@ -24,3 +24,10 @@ def best_akaike(signal, low, high):
   order = low + best_index
   params, covars = mtmvar.mult_AR(signal, order, 1)
   return order, params, covars
+
+
+def z_transform(z, f):
+	T = 0.1
+	F = sum([f(k*T) * z**(-k) for k in np.arange(-100, 100)])
+	return F
+
