@@ -25,9 +25,10 @@ def best_akaike(signal, low, high):
   params, covars = mtmvar.mult_AR(signal, order, 1)
   return order, params, covars
 
+def z_transform(A, f, fs):
+  z = np.exp(2 * np.pi * f / fs)
 
-def z_transform(z, f):
-	T = 0.1
-	F = sum([f[k] * z**(-k) for k in range(len(f))])
-	return F
+  F = sum([np.eye(A[0].shape[0])] + [A[j] * z ** (-j) for j in range(len(A))])
+
+  return F
 
