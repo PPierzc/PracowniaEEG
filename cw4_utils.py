@@ -19,7 +19,7 @@ def akaike(p, V, shape):
   return np.log(np.linalg.det(V)) + 2 * p * shape[0] * shape[0] / shape[1]
 
 def best_akaike(signal, low, high):
-  akaike_scores = get_aic_func(s, 1, 20)
+  akaike_scores = get_aic_func(signal, 1, 20)
   best_index = akaike_scores.index(min(akaike_scores))
   order = low + best_index
   params, covars = mtmvar.mult_AR(signal, order, 1)
