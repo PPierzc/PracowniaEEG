@@ -28,6 +28,6 @@ def best_akaike(signal, low, high):
 
 def z_transform(z, f):
 	T = 0.1
-	F = sum([f(k*T) * z**(-k) for k in np.arange(-100, 100)])
+	F = sum([f[k] * z**(-k) for k in range(len(f)])
 	return F
 
