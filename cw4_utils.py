@@ -1,5 +1,5 @@
 import numpy as np
-import mtmvar
+import PracowniaEEG.mtmvar as mtmvar
 
 def coeffs(signal, low, high):
 	return [ mtmvar.mult_AR(signal, order, 1) for order in range(low, high + 1) ]
