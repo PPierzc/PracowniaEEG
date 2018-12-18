@@ -28,5 +28,5 @@ def best_akaike(signal, low, high):
 def z_transform(A, f, fs):
   z = np.exp(2 * np.pi * f / fs)
 
-  F = sum([np.eye(A[0].shape[0])] + [A[j] * z ** (-j) for j in range(len(A))])
+  F = sum([np.eye(A[0].shape[0])] + [A[j] * z ** (-(j+1)) for j in range(len(A))])
   return F
